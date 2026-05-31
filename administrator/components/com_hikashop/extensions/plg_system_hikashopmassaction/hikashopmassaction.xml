@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - HikaShop Mass Action</name>
+	<creationDate>05 décembre 2025</creationDate>
+	<version>6.1.1</version>
+	<author>HikaShop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-2025 HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>HikaShop System plugin to handle mass action triggers</description>
+	<files>
+		<filename plugin="hikashopmassaction">hikashopmassaction.php</filename>
+		<filename>cacert.pem</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field name="api" type="radio" default="0" label="HIKASHOP_API" description="HIKASHOP_API_DESC" class="btn-group btn-group-yesno">
+					<option value="0">HIKASHOP_NO</option>
+					<option value="1">HIKASHOP_YES</option>
+				</field>
+				<field name="api_key" showon="api:1" type="text" size="20" default="" label="HIKASHOP_API_KEY" description="HIKASHOP_API_KEY_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

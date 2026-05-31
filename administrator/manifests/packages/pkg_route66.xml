@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" type="package" version="5.3">
+	<name>Route 66</name>
+	<author>Lefteris Kavadas</author>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<creationDate>October 2025</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<packagename>route66</packagename>
+	<version>2.2.0</version>
+	<url>https://www.firecoders.com</url>
+	<packager>Lefteris Kavadas</packager>
+	<packagerurl>https://www.firecoders.com</packagerurl>
+	<description></description>
+	<scriptfile>script.php</scriptfile>
+	<files folder="extensions">
+		<file id="com_route66" type="component">com_route66.zip</file>
+		<file group="route66" id="content" type="plugin">plg_route66_content.zip</file>
+		<file group="route66" id="menus" type="plugin">plg_route66_menus.zip</file>
+		<file group="route66" id="route66" type="plugin">plg_route66_route66.zip</file>
+		<file group="route66" id="tags" type="plugin">plg_route66_tags.zip</file>
+		<file group="system" id="route66" type="plugin">plg_system_route66.zip</file>
+		<file group="task" id="route66" type="plugin">plg_task_route66.zip</file>
+	</files>
+	<updateservers>
+		<server name="Route 66" priority="1" type="extension">https://www.firecoders.com/updates/route-66</server>
+	</updateservers>
+</extension>

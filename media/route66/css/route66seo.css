@@ -1,0 +1,236 @@
+#route66-seo-preview {
+  margin: 0;
+  padding: 20px;
+  border: 1px dashed #dddddd;
+  max-width: 600px;
+  background-color: #fff;
+}
+
+.route66-seo-preview-title {
+  color: #1a0dab;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.route66-seo-preview-url {
+  color: #006621;
+  font-size: 14px;
+  line-height: 16px;
+  word-break: break-all;
+}
+
+.route66-seo-preview-description {
+  color: #545454;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.route66-seo-analysis-score {
+  margin: 8px 0;
+}
+
+.route66-seo-analysis-score span.route66-seo-analysis-icon {
+  margin-right: 8px;
+}
+
+.route66-seo-analysis-score-bad span.route66-seo-analysis-icon {
+  color: #942a25;
+}
+
+.route66-seo-analysis-score-ok span.route66-seo-analysis-icon {
+  color: #c67605;
+}
+
+.route66-seo-analysis-score-good span.route66-seo-analysis-icon {
+  color: #378137;
+}
+
+#route66-seo-analysis.j4 .route66-seo-analysis-icon.icon-not-ok::before,
+#route66-readability-analysis.j4 .route66-seo-analysis-icon.icon-not-ok::before {
+  content: "\f05e";
+}
+
+.route66-seo-analysis-score span.route66-seo-analysis-text {}
+
+#route66-seo-score, #route66-readability-score {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+#route66-seo-score .progressbar-text, #route66-readability-score .progressbar-text {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+[data-color-scheme="dark"] #route66-seo-score .progressbar-text, [data-color-scheme="dark"] #route66-readability-score .progressbar-text {
+  color: #fff !important;
+}
+
+
+#k2AdminContainer #route66-seo-preview {
+  margin-bottom: 20px;
+}
+
+#k2AdminContainer #keyword {
+  margin-bottom: 20px;
+}
+
+#k2AdminContainer #route66-seo-score {
+  margin-bottom: 20px;
+}
+
+#route66-seo-dropdown-container, #route66-readability-dropdown-container {
+  position: relative;
+  z-index: 11;
+}
+
+#route66-seo-dropdown, #route66-readability-dropdown {
+  display: none;
+  margin-top: 4px;
+  width: 644px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 13px;
+  position: absolute;
+  z-index: 100;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+#route66-seo-dropdown-container.j3 #route66-seo-dropdown, #route66-readability-dropdown-container.j3 #route66-readability-dropdown {
+  background: #F2F2F2;
+  box-shadow: 0px 0px 15px 0px #BFBFBF;
+  border: 1px solid #BFBFBF;
+  border-radius: 3px;
+}
+
+#route66-seo-dropdown-container.j4 #route66-seo-dropdown, #route66-readability-dropdown-container.j4 #route66-readability-dropdown {
+  padding: 30px 2vw;
+  background: #fff;
+  border: 1px solid var(--bluegray);
+  border-radius: 0;
+}
+
+#toolbar #route66-seo-dropdown [class*=" icon-"], #toolbar #route66-readability-dropdown [class*=" icon-"] {
+  background: none;
+  border-radius: 0;
+  border: none;
+  height: 14px;
+  line-height: 14px;
+  line-height: inherit;
+  margin: 0 8px 0 0;
+  opacity: 1;
+  text-shadow: none;
+  width: 14px;
+  z-index: 1;
+}
+
+#route66-seo-dropdown #route66-seo-preview {
+  background: #fff;
+  border: 1px solid #dddddd;
+}
+
+#route66-seo-dropdown #route66-seo-score, #route66-readability-dropdown #route66-readability-score {
+  margin: 0 auto;
+}
+
+#route66-seo-dropdown-button.btn-success, #route66-readability-dropdown-button.btn-success {
+  min-width: auto;
+}
+
+#route66-seo-dropdown #route66-seo-score, #route66-readability-dropdown #route66-readability-score {
+  width: 80px;
+  height: 80px;
+}
+
+#route66-seo-dropdown .progressbar-text, #route66-readability-dropdown .progressbar-text {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#route66-seo-dropdown-overlay, #route66-readability-dropdown-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+body.route66-seo-dropdown-opened #route66-seo-dropdown, body.route66-seo-dropdown-opened #route66-seo-dropdown-overlay,
+body.route66-readability-dropdown-opened #route66-readability-dropdown, body.route66-readability-dropdown-opened #route66-readability-dropdown-overlay
+{
+  display: block;
+}
+
+#route66-seo-sidebar #route66-seo-score, #route66-seo-sidebar #route66-readability-score {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+#route66-seo-sidebar .progressbar-text {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.route66-seo-score-badge, .route66-readability-score-badge {
+  min-width: 12px;
+  text-align: center;
+  color: #fff;
+  pointer-events: none;
+  background-color: #999;
+}
+
+#route66-seo-analysis a[target="_blank"]::before {
+  content: "";
+}
+
+/* Joomla 4 */
+#fieldset-route66seo legend span, #fieldset-route66readability legend span {
+  display: none;
+}
+
+#fieldset-route66seo>div {
+  column-count: 1;
+}
+
+.subhead #route66-seo-dropdown-button>span, .subhead #route66-readability-dropdown-button>span {
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.subhead #route66-seo-dropdown-button>span.badge, .subhead #route66-readability-dropdown-button>span.badge {
+  color: #fff;
+}
+
+#route66-readability-dropdown-button {
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+

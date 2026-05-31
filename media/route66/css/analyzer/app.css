@@ -1,0 +1,74 @@
+/* Badges */
+.route66-badge.good {
+    color: #46a546;
+}
+
+.route66-badge.ok {
+    color: #c67605;
+}
+
+.route66-badge.bad {
+    color: #bd362f;
+}
+
+[data-bs-theme="dark"] .route66-badge {
+    color: #fff;
+}
+
+
+/* Results */
+.route66-analyzer-result-icon {
+    display: inline-block;
+}
+
+.route66-analyzer-result-icon.good {
+    background-color: #46a546;
+}
+
+.route66-analyzer-result-icon.ok {
+    background-color: #c67605;
+}
+
+.route66-analyzer-result-icon.bad {
+    background-color: #bd362f;
+}
+
+.route66-analyzer-result-icon.feedback {
+    background-color: rgba(108, 117, 125, 1);
+}
+
+
+
+/* Joomla Article Form */
+#attrib-route66 fieldset {
+    padding: 0;
+}
+
+#attrib-route66 fieldset legend {
+    display: none
+}
+
+#route66Tabs .control-group {
+    max-width: 600px;
+}
+
+/* Virtuemart UI fixes */
+body.com_virtuemart #route66Tabs .control-group {
+    margin-top: 0;
+    display: block;
+    width: 100%;
+}
+
+body.com_virtuemart #route66Tabs .control-group.hidden {
+    display: none;
+}
+
+body.com_virtuemart #route66Tabs .control-label {
+    float: none;
+}
+
+body.com_virtuemart #route66Tabs .controls input[type="text"],
+body.com_virtuemart #route66Tabs .controls input[type="url"] {
+    width: auto;
+    max-width: unset;
+}

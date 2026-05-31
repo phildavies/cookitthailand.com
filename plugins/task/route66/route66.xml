@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="task" method="upgrade">
+    <name>PLG_TASK_ROUTE66</name>
+    <author>Lefteris Kavadas</author>
+    <authorEmail>info@firecoders.com</authorEmail>
+    <authorUrl>www.firecoders.com</authorUrl>
+    <creationDate>October 2025</creationDate>
+    <copyright>Lefteris Kavadas / firecoders.com</copyright>
+    <license>GNU General Public License version 3 or later</license>
+    <version>2.2.0</version>
+    <description>PLG_TASK_ROUTE66_DESCRIPTION</description>
+    <namespace path="src">Firecoders\Plugin\Task\Route66</namespace>
+    <files>
+        <folder>language</folder>
+        <folder plugin="route66">services</folder>
+        <folder>src</folder>
+    </files>
+</extension>

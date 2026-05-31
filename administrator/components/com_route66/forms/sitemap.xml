@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field" addruleprefix="Firecoders\Component\Route66\Administrator\Rule">
+	<config>
+		<inlinehelp button="show"/>
+	</config>
+	<fieldset>
+		<field name="id" type="hidden" default="0" label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC"/>
+		<field name="title" type="text" label="JGLOBAL_TITLE" hint="JGLOBAL_TITLE" required="true"/>
+		<field name="state" type="radio" label="JPUBLISHED" description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fields name="sources"></fields>
+	<fields name="settings">
+		<field name="type" type="list" label="COM_ROUTE66_SITEMAP_TYPE" description="COM_ROUTE66_SITEMAP_TYPE_DESC" default="standard">
+			<option value="standard">COM_ROUTE66_SITEMAP_TYPE_STANDARD</option>
+			<option value="news">COM_ROUTE66_SITEMAP_TYPE_NEWS</option>
+		</field>
+		<field name="images" type="radio" showon="type:standard" label="COM_ROUTE66_SITEMAP_IMAGES" description="COM_ROUTE66_SITEMAP_IMAGES_DESC" filter="intval" size="1" default="1" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="videos" type="radio" showon="type:standard" label="COM_ROUTE66_SITEMAP_VIDEOS" description="COM_ROUTE66_SITEMAP_VIDEOS_DESC" filter="intval" size="1" default="1" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fields>
+</form>

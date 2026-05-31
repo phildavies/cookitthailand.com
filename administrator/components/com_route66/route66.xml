@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+	<name>COM_ROUTE66</name>
+	<author>Lefteris Kavadas</author>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<creationDate>October 2025</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<version>2.2.0</version>
+	<namespace path="src">Firecoders\Component\Route66</namespace>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	<files folder="components/com_route66">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+	<administration>
+		<menu>COM_ROUTE66</menu>
+		<submenu>
+			<menu view="dashboard">
+				COM_ROUTE66_DASHBOARD
+			</menu>
+			<menu view="pages">
+				COM_ROUTE66_PAGES
+			</menu>
+			<menu view="aitools">
+				COM_ROUTE66_AI_TOOLS
+			</menu>
+			<menu view="sitemaps">
+				COM_ROUTE66_SITEMAPS
+			</menu>
+			<menu task="robots.edit">
+				COM_ROUTE66_EDIT_ROBOTS_TXT
+			</menu>
+		</submenu>
+		<files folder="administrator/components/com_route66">
+			<folder>forms</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+			<folder>vendor</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+		</files>
+	</administration>
+	<media destination="route66" folder="media/route66">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>xsl</folder>
+	</media>
+</extension>

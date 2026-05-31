@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <fieldset>
+
+    <field name="id"     type="hidden" default="0" />
+
+    <field name="mtime"  type="hidden" default="0" />
+
+    <field name="url" type="url" default=""
+      class="inputbox readonly"
+      label="AIMY_SM_FIELD_URL_LBL"
+      description="AIMY_SM_FIELD_URL_DSC"
+      filter="text"
+      required="true"
+      readonly="true" />
+
+
+    <field name="title" type="text" default=""
+      class="inputbox readonly"
+      label="AIMY_SM_FIELD_TITLE_LBL"
+      description="AIMY_SM_FIELD_TITLE_DSC"
+      required="true"
+      readonly="true" />
+
+
+    <field name="priority" type="list"
+      default="1.0"
+      class="inputbox"
+      required="true"
+      label="AIMY_SM_FIELD_PRIO_LBL"
+      description="AIMY_SM_FIELD_PRIO_DSC">
+        <option value="0.1">0.1</option>
+        <option value="0.2">0.2</option>
+        <option value="0.3">0.3</option>
+        <option value="0.4">0.4</option>
+        <option value="0.5">0.5</option>
+        <option value="0.6">0.6</option>
+        <option value="0.7">0.7</option>
+        <option value="0.8">0.8</option>
+        <option value="0.9">0.9</option>
+        <option value="1">1.0</option>
+    </field>
+
+    <field name="changefreq"
+      type="list"
+      default="AIMY_SM_CF_MONTHLY"
+      required="true"
+      label="AIMY_SM_FIELD_DFLT_CHANGEFREQ_LBL"
+      description="AIMY_SM_FIELD_DFLT_CHANGEFREQ_DSC">
+      <option value="always">AIMY_SM_CF_ALWAYS</option>
+      <option value="hourly">AIMY_SM_CF_HOURLY</option>
+      <option value="daily">AIMY_SM_CF_DAILY</option>
+      <option value="weekly">AIMY_SM_CF_WEEKLY</option>
+      <option value="monthly">AIMY_SM_CF_MONTHLY</option>
+      <option value="yearly">AIMY_SM_CF_YEARLY</option>
+      <option value="never">AIMY_SM_CF_NEVER</option>
+    </field>
+
+
+    <field name="state" type="radio"
+      default="1"
+      class="btn-group btn-group-yesno"
+      labelclass="control-group"
+      required="true"
+      label="AIMY_SM_FIELD_STATE_LBL"
+      description="AIMY_SM_FIELD_STATE_DSC">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+
+  </fieldset>
+</form>
+
+<!-- vim: set ft=xml sts=2 sw=2 ts=2 ai et: -->

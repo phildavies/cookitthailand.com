@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_route66/fields" name="route66seo">
+		<fieldset label="COM_ROUTE66_SEO_BADGE" name="route66seo">
+			<field name="url" hint="https://www.your-site.com/path-to-page" class="input-block-level" type="url" required="true" label="COM_ROUTE66_URL" description="COM_ROUTE66_URL_DESC"/>
+			<field name="keyword" class="input-xlarge" type="text" label="COM_ROUTE66_FOCUS_KEYWORD_LABEL" description="COM_ROUTE66_FOCUS_KEYWORD_DESC"/>
+			<field name="preview" type="route66seopreview" label="COM_ROUTE66_SNIPPET_PREVIEW_LABEL" description="COM_ROUTE66_SNIPPET_PREVIEW_DESC"/>
+			<field name="score" type="route66seoscore" default="0" label="COM_ROUTE66_SCORE_LABEL" description="COM_ROUTE66_SCORE_DESC"/>
+			<field name="analysis" type="route66seoanalysis" label="COM_ROUTE66_ANALYSIS_LABEL" description="COM_ROUTE66_ANALYSIS_DESC"/>
+			<field name="readability" type="route66readabilityscore" default="0" label="COM_ROUTE66_SCORE" description="COM_ROUTE66_READABILITY_SCORE_DESC"/>
+			<field name="readabilityanalysis" type="route66readabilityanalysis" label="COM_ROUTE66_ANALYSIS_LABEL" description="COM_ROUTE66_READABILITY_ANALYSIS_DESC" />
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="sources">
+		<fieldset name="articles">
+			<field name="content" type="list" label="Joomla! Articles" class="btn-group radio" default="1">
+				<option value="0">JNONE</option>
+				<option value="1">JALL</option>
+				<option value="2">JSELECT</option>
+			</field>
+			<field name="contentCategories" label="" type="category" showon="content:2" multiple="multiple" extension="com_content"/>
+		</fieldset>
+	</fields>
+</form>

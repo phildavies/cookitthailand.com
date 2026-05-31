@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="sources">
+        <fieldset name="menu">
+            <field name="menus" type="radio" label="COM_ROUTE66_MENU_ITEMS" class="btn-group btn-group-sm" default="1">
+                <option value="1" class="btn btn-outline-primary">JALL</option>
+                <option value="2" class="btn btn-outline-primary">JSELECT</option>
+                <option value="0" class="btn btn-outline-primary">JNONE</option>
+            </field>
+            <field name="menuTypes" type="menu" clientid="site" hiddenLabel="true" showon="menus:2" multiple="multiple"/>
+        </fieldset>
+    </fields>
+</form>

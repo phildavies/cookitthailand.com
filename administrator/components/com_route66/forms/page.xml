@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field" addruleprefix="Firecoders\Component\Route66\Administrator\Rule">
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <field name="id" type="hidden" default="0" />
+    <field name="title" type="hidden" filter="unset" />
+    <field name="description" type="hidden" filter="unset" />
+    <field name="text" type="hidden" filter="unset" />
+    <field name="language" type="hidden" filter="unset" />
+    <fields name="analysis">
+        <field name="id" type="hidden" default="0" />
+        <field name="resource_id" type="hidden" />
+        <field name="link_hash" type="hidden" />
+        <fieldset label="COM_ROUTE66_SEO_BADGE" name="seo">
+            <field name="seo_keyphrase" type="text" class="route66-analyzer-keyphrase w-100" label="COM_ROUTE66_FOCUS_KEYPHRASE_LABEL" description="COM_ROUTE66_FOCUS_KEYPHRASE_DESC"/>
+            <field name="seo_score" class="route66-analyzer-seo-score" type="hidden" />
+        </fieldset>
+        <fieldset label="COM_ROUTE66_READABILITY_BADGE" name="readability">
+            <field name="readability_score" class="route66-analyzer-readability-score" type="hidden" />
+        </fieldset>
+    </fields>
+    <fieldset label="COM_ROUTE66_METADATA" name="metadata">
+        <fields name="metadata">
+            <field name="id" type="hidden" default="0" />
+            <field name="resource_id" type="hidden" />
+            <field name="link_hash" type="hidden" />
+            <field name="title" alias="seo-title" type="title" class="route66-metadata-title" label="COM_ROUTE66_METADATA_TITLE_LABEL"/>
+            <field name="description" class="route66-metadata-description w-100" type="AITextarea" alias="meta-description" maxlength="300" charcounter="true" label="COM_ROUTE66_META_DESCRIPTION_LABEL"/>
+            <field name="robots" type="list" label="COM_ROUTE66_METADATA_ROBOTS_LABEL" description="COM_ROUTE66_METADATA_ROBOTS_DESC">
+                <option value="">JNONE</option>
+                <option value="index, follow" />
+                <option value="noindex, follow" />
+                <option value="index, nofollow" />
+                <option value="noindex, nofollow" />
+            </field>
+            <field name="canonical" type="url" validate="url" schemes="http,https" class="w-100" label="COM_ROUTE66_METADATA_CANONICAL_URL_LABEL" description="COM_ROUTE66_METADATA_CANONICAL_URL_DESC"/>
+        </fields>
+    </fieldset>
+    <fieldset label="COM_ROUTE66_SOCIAL" name="social">
+        <fields name="metadata">
+            <field name="og_title" class="route66-og-title w-100" type="AIText" alias="open-graph-title" charcounter="true" maxlength="90" label="COM_ROUTE66_META_OG_TITLE_LABEL" description="COM_ROUTE66_META_OG_TITLE_DESC"/>
+            <field name="og_description" class="route66-og-description w-100" type="AITextarea" alias="open-graph-description" charcounter="true" maxlength="300" label="COM_ROUTE66_META_OG_DESCRIPTION_LABEL" description="COM_ROUTE66_META_OG_DESCRIPTION_DESC"/>
+            <field name="og_image" type="media" label="COM_ROUTE66_META_OG_IMAGE_LABEL" description="COM_ROUTE66_META_OG_IMAGE_DESC"/>
+            <field name="og_type" type="list" label="COM_ROUTE66_META_OG_TYPE_LABEL" description="COM_ROUTE66_META_OG_TYPE_DESC" default="">
+                <option value="">JNONE</option>
+                <option value="article">article</option>
+                <option value="website">website</option>
+                <option value="profile">profile</option>
+                <option value="product">product</option>
+            </field>
+            <field name="customize_x" label="COM_ROUTE66_CUSTOMIZE_X_LABEL" description="COM_ROUTE66_CUSTOMIZE_X_DESC" type="switch" layout="joomla.form.field.radio.switcher" default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="x_title" class="route66-x-title w-100" showon="customize_x:1" type="AIText" alias="x-twitter-title" charcounter="true" maxlength="90" label="COM_ROUTE66_META_X_TITLE_LABEL" description="COM_ROUTE66_META_X_TITLE_DESC"/>
+            <field name="x_description" class="route66-x-description w-100" showon="customize_x:1" alias="x-twitter-description" type="AITextarea" charcounter="true" maxlength="300" label="COM_ROUTE66_META_X_DESCRIPTION_LABEL" description="COM_ROUTE66_META_X_DESCRIPTION_DESC"/>
+            <field name="x_image" showon="customize_x:1" type="media" label="COM_ROUTE66_META_X_IMAGE_LABEL" description="COM_ROUTE66_META_X_IMAGE_DESC"/>
+        </fields>
+    </fieldset>
+</form>

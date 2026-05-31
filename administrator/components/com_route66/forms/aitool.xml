@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field" addruleprefix="Firecoders\Component\Route66\Administrator\Rule">
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <fieldset>
+        <field name="id" type="hidden" default="0" label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="title" type="text" label="JGLOBAL_TITLE" hint="JGLOBAL_TITLE" required="true" />
+        <field name="description" type="textarea" label="JGLOBAL_DESCRIPTION" required="true" />
+        <field name="alias" type="hidden" readonly="true" />
+        <field name="prompt" type="textarea" rows="20" label="COM_ROUTE66_PROMPT_LABEL" description="COM_ROUTE66_PROMPT_DESC" required="true" />
+        <field name="instructions" type="textarea" rows="5" label="COM_ROUTE66_INSTRUCTIONS_LABEL" description="COM_ROUTE66_INSTRUCTIONS_DESC" />
+        <field name="temperature" type="number" min="0" max="2" step="0.1" default="0.7" required="true" label="COM_ROUTE66_TEMPERATURE_LABEL" description="COM_ROUTE66_TEMPERATURE_DESC" />
+        <field name="target" type="AIResourceProperty" required="true" label="COM_ROUTE66_TARGET_PROPERTY_LABEL" description="COM_ROUTE66_TARGET_PROPERTY_DESC" />
+        <field name="state" type="radio" label="JENABLED" description="JFIELD_ENABLED_DESC" filter="intval" size="1" default="1" layout="joomla.form.field.radio.switcher">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="created" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL" translateformat="true" showtime="true" readonly="true" filter="unset" />
+        <field name="created_by" type="user" label="JGLOBAL_FIELD_CREATED_BY_LABEL" readonly="true" filter="unset" validate="number" />
+        <field name="modified" type="calendar" label="JGLOBAL_FIELD_MODIFIED_LABEL" class="form-control" translateformat="true" showtime="true" readonly="true" filter="user_utc" />
+        <field name="modified_by" type="user" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" readonly="true" filter="unset" validate="number" />
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+        <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" maxlength="255" />
+    </fieldset>
+</form>

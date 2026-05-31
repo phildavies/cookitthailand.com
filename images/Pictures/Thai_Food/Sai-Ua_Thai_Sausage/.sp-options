@@ -1,0 +1,11 @@
+[SHORTPIXEL]
+lossy=1
+keep_exif=0
+cmyk2rgb=1
+resize=1
+resize_width=1200
+resize_height=1200
+convertto="+webp"
+backup_path=""
+exclude=""
+base_url="https://parawanthaicookingclass.com/shortpixel-web/images/Pictures/Thai_Food/Sai-Ua_Thai_Sausage"

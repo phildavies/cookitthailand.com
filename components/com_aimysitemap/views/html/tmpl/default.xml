@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<metadata>
+  <layout title="AIMY_SM_VIEW_HTML_TITLE">
+    <message>
+      <![CDATA[AIMY_SM_VIEW_HTML_DSC]]>
+    </message>
+  </layout>
+  <fields name="request">
+    <fieldset name="request"
+      addfieldpath="/administrator/components/com_aimysitemap/fields/">
+      <field name="variant" type="list" default="list"
+        class="inputbox"
+        label="AIMY_SM_FIELD_VARIANT_LBL"
+        description="AIMY_SM_FIELD_VARIANT_DSC">
+        <option value="index">AIMY_SM_V_INDEX</option>
+        <option value="list">AIMY_SM_V_LIST</option>
+
+
+      </field>
+      <field name="prevent_duplicate_titles"
+        type="radio"
+        default="1"
+        class="btn-group btn-group-yesno"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_PREVENT_DUPLICATE_TITLES_LBL"
+        description="AIMY_SM_FIELD_PREVENT_DUPLICATE_TITLES_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+      <field name="remove_emojis"
+        type="radio"
+        default="remove_leading"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-label"
+        label="AIMY_SM_FIELD_REMOVE_EMOJIS_LBL"
+        description="AIMY_SM_FIELD_REMOVE_EMOJIS_DSC">
+        <option value="remove_leading">AIMY_SM_EMOJIS_REMOVE_LEADING</option>
+        <option value="remove_all">AIMY_SM_EMOJIS_REMOVE_ALL</option>
+        <option value="0">JNO</option>
+      </field>
+      <field name="container_style" type="list" default="bs2"
+        class="inputbox"
+        label="AIMY_SM_FIELD_CONTAINER_STYLE_LBL"
+        description="AIMY_SM_FIELD_CONTAINER_STYLE_DSC">
+        <option value="bs2">Bootstrap 2</option>
+        <option value="bs3">Bootstrap 3/4/5</option>
+      </field>
+
+      <field name="filter_by_language"
+        type="radio"
+        default="0"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_FILTER_BY_LANGUAGE_LBL"
+        description="AIMY_SM_FIELD_FILTER_BY_LANGUAGE_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+
+      <field name="exclude_images"
+        type="radio"
+        default="0"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_EXCLUDE_IMAGES_LBL"
+        description="AIMY_SM_FIELD_EXCLUDE_IMAGES_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+      <field name="exclude_documents"
+        type="radio"
+        default="0"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_EXCLUDE_DOCUMENTS_LBL"
+        description="AIMY_SM_FIELD_EXCLUDE_DOCUMENTS_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+      <field name="exclude_multimedia"
+        type="radio"
+        default="0"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_EXCLUDE_MULTIMEDIA_LBL"
+        description="AIMY_SM_FIELD_EXCLUDE_MULTIMEDIA_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+      <field name="show_credits"
+        type="radio"
+        default="1"
+        class="btn-group btn-group-yesno aimy-pro-feature"
+        labelclass="control-group"
+        label="AIMY_SM_FIELD_SHOW_CREDITS_LBL"
+        description="AIMY_SM_FIELD_SHOW_CREDITS_DSC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+      </field>
+
+      <field type="proonlynotice" />
+
+    </fieldset>
+  </fields>
+</metadata>
+
+<!-- vim: set ft=xml sw=2 ts=2 sts=2 ai et: -->

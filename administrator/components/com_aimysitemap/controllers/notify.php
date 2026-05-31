@@ -1,0 +1,11 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Aimy Extensions, Netzum Sorglos Software GmbH
+ * Copyright (c) 2014-2017 Aimy Extensions, Lingua-Systems Software GmbH
+ *
+ * https://www.aimy-extensions.com/
+ *
+ * License: GNU GPLv2, see LICENSE.txt within distribution and/or
+ *          https://www.aimy-extensions.com/software-license.html
+ */
+ defined( '_JEXEC' ) or die(); require_once( JPATH_COMPONENT . '/helpers/rights.php' ); require_once( JPATH_COMPONENT . '/Notifier.php' ); use Joomla\CMS\MVC\Controller\AdminController; use Joomla\CMS\Session\Session; use Joomla\CMS\Language\Text; use Joomla\CMS\Factory; use Joomla\CMS\Router\Route; class AimySitemapControllerNotify extends AdminController { public function ping_ajax() { Session::checkToken() or jexit( Text::_( 'INVALID TOKEN' ) ); header( 'Content-Type: application/json; charset=UTF-8' ); $rights = AimySitemapRightsHelper::getRights(); if ( ! $rights->get( 'aimysitemap.notify' ) ) { echo json_encode(array( 'err' => Text::_( 'JLIB_APPLICATION_ERROR_ACCESS_FORBIDDEN' ) )); jexit( 1 ); } $jinput = Factory::getApplication()->input; $se = $jinput->getWord( 'n', null ); if ( is_null( $se ) ) { echo json_encode(array( 'err' => 'Internal error' )); jexit( 1 ); } if ( ! AimySitemapNotifier::is_enabled( $se ) ) { echo json_encode(array( 'err' => Text::_( 'JDISABLED' ) )); jexit( 1 ); } $rv = false; try { $rv = AimySitemapNotifier::ping( $se ); } catch ( Exception $e ) { echo json_encode(array( 'err' => Text::sprintf( 'AIMY_SM_ERR_CONNECT', $e->getMessage() ) )); jexit( 1 ); } if ( is_array( $rv ) && isset( $rv[ 'ok' ] ) && $rv[ 'ok' ] ) { $res = array( 'ok' => true ); if ( isset( $rv[ 'msg' ] ) ) { $res[ 'msg' ] = $rv[ 'msg' ]; } echo json_encode( $res ); } else { $ed = array( 'err' => Text::_( 'AIMY_SM_ERR_NOTIFY' ), ); if ( isset( $rv[ 'msg' ] ) && $rv[ 'msg' ] ) { $ed[ 'msg' ] = $rv[ 'msg' ]; } echo json_encode($ed); jexit( 1 ); } Factory::getApplication()->close(); } public function ping() { Session::checkToken() or jexit( Text::_( 'INVALID TOKEN' ) ); $rights = AimySitemapRightsHelper::getRights(); if ( ! $rights->get( 'aimysitemap.notify' ) ) { $this->setError( Text::_( 'JLIB_APPLICATION_ERROR_ACCESS_FORBIDDEN' ) ); $this->setMessage( $this->getError(), 'error' ); $this->setRedirect( Route::_( 'index.php?option=com_aimysitemap&view=urls', false ) ); return false; } return true; } } 

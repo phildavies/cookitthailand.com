@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `#__route66_ai_tools`;
+DROP TABLE IF EXISTS `#__route66_content_analysis`;
+DROP TABLE IF EXISTS `#__route66_crawler_queue`;
+DROP TABLE IF EXISTS `#__route66_crawler_tasks`;
+DROP TABLE IF EXISTS `#__route66_metadata`;
+DROP TABLE IF EXISTS `#__route66_pages`;
+DROP TABLE IF EXISTS `#__route66_robots_txt`;
+DROP TABLE IF EXISTS `#__route66_sitemaps`;
+DROP TABLE IF EXISTS `#__route66_metadata_backup`;
+DELETE FROM `#__content_types` WHERE `type_alias` = 'com_route66.robots' OR `type_alias` = 'com_route66.aitool';

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field">
+    <fields name="filter">
+        <field name="search" type="text" inputmode="search" label="COM_ROUTE66_PAGES_FILTER_SEARCH_LABEL" hint="JSEARCH_FILTER" />
+        <field name="issues" type="list" label="COM_ROUTE66_ISSUES" hint="COM_ROUTE66_SELECT_ISSUES" multiple="true" layout="joomla.form.field.list-fancy-select" class="js-select-submit-on-change">
+            <option value="no_title">COM_ROUTE66_LABEL_NO_TITLE</option>
+            <option value="duplicate_title">COM_ROUTE66_LABEL_DUPLICATE_TITLE</option>
+            <option value="no_description">COM_ROUTE66_LABEL_NO_DESCRIPTION</option>
+            <option value="duplicate_description">COM_ROUTE66_LABEL_DUPLICATE_DESCRIPTION</option>
+            <option value="duplicate_resource">COM_ROUTE66_LABEL_DUPLICATE_RESOURCE</option>
+            <option value="no_index">COM_ROUTE66_LABEL_NO_INDEX</option>
+            <option value="no_follow">COM_ROUTE66_LABEL_NO_FOLLOW</option>
+            <option value="robots_txt_blocked">COM_ROUTE66_LABEL_ROBOTS_TXT_BLOCKED</option>
+            <option value="slow_page">COM_ROUTE66_LABEL_PAGE_TIME</option>
+            <option value="large_page">COM_ROUTE66_LABEL_PAGE_SIZE</option>
+            <option value="uncompressed">COM_ROUTE66_LABEL_NO_COMPRESSION</option>
+            <option value="dom_size">COM_ROUTE66_LABEL_LARGE_DOM</option>
+        </field>
+        <field name="seo_rating" type="list" label="COM_ROUTE66_SEO" class="js-select-submit-on-change">
+            <option value="">COM_ROUTE66_SELECT_SEO_RATING</option>
+            <option value="good">COM_ROUTE66_GOOD</option>
+            <option value="ok">COM_ROUTE66_OK</option>
+            <option value="bad">COM_ROUTE66_NEEDS_IMPROVEMENT</option>
+        </field>
+        <field name="readability_rating" type="list" label="COM_ROUTE66_READABILITY" class="js-select-submit-on-change">
+            <option value="">COM_ROUTE66_SELECT_READABILITY_RATING</option>
+            <option value="good">COM_ROUTE66_GOOD</option>
+            <option value="ok">COM_ROUTE66_OK</option>
+            <option value="bad">COM_ROUTE66_NEEDS_IMPROVEMENT</option>
+        </field>
+        <field name="response_type" type="list" label="COM_ROUTE66_RESPONSE_TYPE" class="js-select-submit-on-change">
+            <option value="">COM_ROUTE66_SELECT_RESPONSE_TYPE</option>
+            <option value="normal">COM_ROUTE66_RESPONSE_TYPE_NORMAL</option>
+            <option value="redirect">COM_ROUTE66_RESPONSE_TYPE_REDIRECT</option>
+            <option value="missing">COM_ROUTE66_RESPONSE_TYPE_NOT_FOUND</option>
+            <option value="error">COM_ROUTE66_RESPONSE_TYPE_ERROR</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" statuses="*,0,1,-2" class="js-select-submit-on-change" default="sitemap.id DESC" validate="options">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="page.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="page.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="page.size ASC">COM_ROUTE66_PAGE_SIZE_ASC</option>
+            <option value="page.size DESC">COM_ROUTE66_PAGE_SIZE_DESC</option>
+            <option value="page.time ASC">COM_ROUTE66_RESPONSE_TIME_ASC</option>
+            <option value="page.time DESC">COM_ROUTE66_RESPONSE_TIME_DESC</option>
+            <option value="page.crawled ASC">COM_ROUTE66_LAST_CRAWLED_ASC</option>
+            <option value="page.crawled DESC">COM_ROUTE66_LAST_CRAWLED_DESC</option>
+            <option value="page.id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="page.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+        <field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change" />
+    </fields>
+</form>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_route66/fields" name="route66metadata">
+		<fieldset name="jmetadata">
+			<field name="og_type" type="list" default="article" label="COM_ROUTE66_OG_TYPE">
+				<option value="">JNONE</option>
+				<option value="article">COM_ROUTE66_OG_TYPE_ARTICLE</option>
+				<option value="product">COM_ROUTE66_OG_TYPE_PRODUCT</option>
+			</field>
+			<field showon="og_type:article[OR]og_type:product" name="og_title" type="text" label="COM_ROUTE66_OG_TITLE" hint="COM_ROUTE66_LEAVE_BLANK_TO_USE_TITLE"/>
+			<field showon="og_type:article[OR]og_type:product" name="og_description" type="textarea" label="COM_ROUTE66_OG_DESCRIPTION" hint="COM_ROUTE66_LEAVE_BLANK_TO_USE_DESCRIPTION" filter="string" cols="30" rows="3"/>
+			<field showon="og_type:article[OR]og_type:product" name="og_image" type="list" default="full_image" label="COM_ROUTE66_OG_IMAGE">
+				<option value="">JNONE</option>
+				<option value="intro_image">COM_ROUTE66_USE_INTRO_IMAGE</option>
+				<option value="full_image">COM_ROUTE66_USE_FULL_ARTICLE_IMAGE</option>
+				<option value="media">COM_ROUTE66_USE_MEDIA_MANAGER</option>
+				<option value="url">COM_ROUTE66_CUSTOM_URL</option>
+			</field>
+			<field showon="og_image:media" name="og_image_media" type="media" labelclass="hidden"/>
+			<field showon="og_image:url" name="og_image_url" type="text" label="COM_ROUTE66_URL"/>
+		</fieldset>
+	</fields>
+</form>

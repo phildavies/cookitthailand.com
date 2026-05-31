@@ -1,0 +1,96 @@
+# Proposed local XAMPP82 .htaccess for Cook It Thailand
+
+# Target runtime path: C:\xampp82\htdocs\cookitthailand.com\.htaccess
+
+# Local URL: http://localhost/cookitthailand.com
+
+# Policy: no index.php + no trailing slash
+
+#
+
+# This file is intentionally local-only:
+
+# - no HTTPS forcing
+
+# - no host canonicalization
+
+# - RewriteBase is /cookitthailand.com/
+
+# - no WordPress, PageLayer, or SpeedyCache rules
+
+##
+
+# Basic hardening
+
+##
+
+Options -Indexes
+
+##
+
+# Rewrite rules
+
+##
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /cookitthailand.com/
+
+    ##
+    # Legacy Pattaya URL consolidation
+    ##
+    RewriteRule ^pattaya/?$ /cookitthailand.com/locations/pattaya [R=301,L,NE]
+    RewriteRule ^pattaya/pattaya-thai-cooking-class/?$ /cookitthailand.com/locations/pattaya [R=301,L,NE]
+
+    ##
+    # Legacy Koh Samui URL consolidation
+    ##
+    RewriteRule ^locations/koh-samui/?$ /cookitthailand.com/locations/thai-cooking-class-samui [R=301,L,NE]
+    RewriteRule ^index\.php/locations/koh-samui/?$ /cookitthailand.com/locations/thai-cooking-class-samui [R=301,L,NE]
+
+    ##
+    # Legacy Koh Phangan URL consolidation
+    ##
+    RewriteRule ^locations/koh-phangan/?$ /cookitthailand.com/locations/cooking-class-koh-phangan [R=301,L,NE]
+    RewriteRule ^index\.php/locations/koh-phangan/?$ /cookitthailand.com/locations/cooking-class-koh-phangan [R=301,L,NE]
+
+    ##
+    # Remove /index.php/ from path URLs in local subdirectory staging.
+    # Example:
+    # /cookitthailand.com/index.php/locations/koh-tao
+    # -> /cookitthailand.com/locations/koh-tao
+    ##
+    RewriteCond %{THE_REQUEST} \s+/cookitthailand\.com/index\.php/([^\s?]*) [NC]
+    RewriteRule ^index\.php/(.*)$ /cookitthailand.com/$1 [R=301,L,NE]
+
+    ##
+    # Remove trailing slash from non-directory local page URLs.
+    # Example:
+    # /cookitthailand.com/locations/koh-tao/
+    # -> /cookitthailand.com/locations/koh-tao
+    ##
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^/cookitthailand\.com/(.+)/$
+    RewriteCond %{REQUEST_URI} !^/cookitthailand\.com/$
+    RewriteRule ^(.+)/$ /cookitthailand.com/$1 [R=301,L,NE]
+
+    ##
+    # Joomla SEF front controller.
+    # Leave real files and directories alone.
+    ##
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule .* index.php [L]
+
+</IfModule>
+
+##
+
+# Optional local compression.
+
+##
+
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>

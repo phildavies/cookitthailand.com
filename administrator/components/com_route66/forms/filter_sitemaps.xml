@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field">
+	<fields name="filter">
+		<field name="search" type="text" inputmode="search" label="COM_ROUTE66_SITEMAPS_FILTER_SEARCH_LABEL" hint="JSEARCH_FILTER" />
+		<field name="state" type="status" label="JSTATUS" class="js-select-submit-on-change">
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field name="fullordering" type="list" label="JGLOBAL_SORT_BY" statuses="*,0,1,-2" class="js-select-submit-on-change" default="sitemap.id DESC" validate="options">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="sitemap.state ASC">JSTATUS_ASC</option>
+			<option value="sitemap.state DESC">JSTATUS_DESC</option>
+			<option value="sitemap.title ASC">JGLOBAL_TITLE_ASC</option>
+			<option value="sitemap.title DESC">JGLOBAL_TITLE_DESC</option>
+			<option value="sitemap.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="sitemap.id DESC">JGRID_HEADING_ID_DESC</option>
+		</field>
+		<field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change" />
+	</fields>
+</form>

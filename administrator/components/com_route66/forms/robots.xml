@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldprefix="Firecoders\Component\Route66\Administrator\Field" addruleprefix="Firecoders\Component\Route66\Administrator\Rule">
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <field name="id" type="hidden" default="1" />
+    <field name="contents" type="editor" editor="codemirror" label="COM_ROUTE66_ROBOTS_TXT_LABEL" description="COM_ROUTE66_ROBOTS_TXT_DESC" />
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" maxlength="255" />
+</form>

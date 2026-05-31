@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="sources">
+        <fieldset name="articles">
+            <field name="content" type="radio" label="COM_ROUTE66_JOOMLA_ARTICLES" default="1" class="btn-group btn-group-sm">
+                <option value="1" class="btn btn-outline-primary">JALL</option>
+                <option value="2" class="btn btn-outline-primary">JSELECT</option>
+                <option value="0" class="btn btn-outline-primary">JNONE</option>
+            </field>
+            <field name="contentCategories" addfieldprefix="Joomla\Component\Categories\Administrator\Field" hiddenLabel="true" type="categoryedit" showon="content:2" multiple="multiple" extension="com_content"/>
+        </fieldset>
+    </fields>
+</form>

@@ -1,0 +1,39 @@
+# Joomla local configuration and secrets
+/configuration.php
+/configuration.bak.php
+/.env
+/.env.*
+!.env.dist
+
+# Joomla runtime/generated files
+/cache/
+/administrator/cache/
+/tmp/
+/logs/
+/log/
+/.jch/
+/shortpixel-web/
+
+# Backups and archives
+/Akeeba Backups/
+/*.jpa
+/*.jps
+/*.zip
+/*.tar
+/*.tar.gz
+/*.tgz
+/*.bak
+/*.backup
+/*.sql
+/*.sql.gz
+
+# Local/system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local editor/project files
+/.idea/
+/.vscode/
+*.swp
+*.swo

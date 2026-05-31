@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="2.5" method="upgrade">
+  <name>POWR Map</name>
+  <author>POWR.io</author>
+  <creationDate>Mar 2024</creationDate>
+  <copyright>Copyright (©) 2017 POWR. All rights reserved.</copyright>
+  <authorEmail>info@powr.io</authorEmail>
+  <authorUrl>https://powr.io</authorUrl>
+  <version>3.0</version>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <languages>
+      <language tag="en-GB">en-GB.mod_powrmap.ini</language>
+  </languages>
+  <description>MOD_MAP_DESCRIPTION</description>
+  <files>
+  <filename>index.html</filename>
+      <filename module="mod_powrmap">mod_powrmap.php</filename>
+  </files>
+</extension>

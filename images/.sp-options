@@ -1,0 +1,9 @@
+[SHORTPIXEL]
+lossy=1
+keep_exif=1
+cmyk2rgb=1
+resize=1
+convertto="+webp"
+backup_path=""
+exclude=""
+base_url="https://parawanthaicookingclass.com/images"

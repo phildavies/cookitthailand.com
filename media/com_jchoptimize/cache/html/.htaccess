@@ -1,0 +1,6 @@
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+<IfModule mod_headers.c>
+    Header always unset Content-Security-Policy
+</IfModule>

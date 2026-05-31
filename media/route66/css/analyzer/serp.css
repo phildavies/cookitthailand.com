@@ -1,0 +1,46 @@
+.route66-search-preview {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.route66-search-preview-title {
+    color: #1a0dab;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.route66-search-preview-url {
+    color: #006621;
+    font-size: 14px;
+    font-style: normal;
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.route66-search-preview-description {
+    color: #545454;
+    font-size: 13px;
+    line-height: 1.58;
+}
+
+[data-bs-theme="dark"] .route66-search-preview {
+    background: #1e1e1e;
+    border-color: #333;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .route66-search-preview-title {
+    color: #8ab4f8;
+}
+
+[data-bs-theme="dark"] .route66-search-preview-description {
+    color: #e8eaed;
+}

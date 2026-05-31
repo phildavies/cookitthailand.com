@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.0" type="component" method="upgrade">
+  <name>com_aimysitemap</name>
+  <creationDate>2025-10-08</creationDate>
+  <author>Aimy Extensions (Netzum Sorglos Software GmbH)</author>
+  <authorEmail>info@aimy-extensions.com</authorEmail>
+  <authorUrl>https://www.aimy-extensions.com/</authorUrl>
+  <copyright>2014-2025 Aimy Extensions, Netzum Sorglos Software GmbH</copyright>
+  <license>GNU General Public License (GPL) v2</license>
+  <version>39.0</version>
+  <description>Aimy Sitemap Generator</description>
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>aimysitemap.php</filename>
+    <filename>controller.php</filename>
+    <filename>router.php</filename>
+    <folder>models</folder>
+    <folder>views</folder>
+    <folder>controllers</folder>
+  </files>
+  <languages folder="site">
+    <language tag="en-GB">i18n/en-GB.com_aimysitemap.ini</language>
+    <language tag="de-DE">i18n/de-DE.com_aimysitemap.ini</language>
+    <language tag="es-ES">i18n/es-ES.com_aimysitemap.ini</language>
+    <language tag="fa-IR">i18n/fa-IR.com_aimysitemap.ini</language>
+    <language tag="fr-FR">i18n/fr-FR.com_aimysitemap.ini</language>
+    <language tag="nl-NL">i18n/nl-NL.com_aimysitemap.ini</language>
+    <language tag="pl-PL">i18n/pl-PL.com_aimysitemap.ini</language>
+    <language tag="pt-BR">i18n/pt-BR.com_aimysitemap.ini</language>
+    <language tag="ro-RO">i18n/ro-RO.com_aimysitemap.ini</language>
+    <language tag="ru-RU">i18n/ru-RU.com_aimysitemap.ini</language>
+    <language tag="sk-SK">i18n/sk-SK.com_aimysitemap.ini</language>
+    <language tag="cs-CZ">i18n/cs-CZ.com_aimysitemap.ini</language>
+    <language tag="sl-SI">i18n/sl-SI.com_aimysitemap.ini</language>
+    <language tag="it-IT">i18n/it-IT.com_aimysitemap.ini</language>
+    <language tag="prs-AF">i18n/prs-AF.com_aimysitemap.ini</language>
+    <language tag="sv-SE">i18n/sv-SE.com_aimysitemap.ini</language>
+  </languages>
+  <media destination="com_aimysitemap" folder="media">
+    <filename>aimy-logo_340x327.png</filename>
+    <filename>aimy-logo_100x50.png</filename>
+    <filename>aimy-logo_dm_100x50.png</filename>
+    <filename>aimy.eot</filename>
+    <filename>aimy.svg</filename>
+    <filename>aimy.ttf</filename>
+    <filename>aimy.woff</filename>
+    <filename>aimy.woff2</filename>
+    <filename>index.html</filename>
+    <filename>crawl.js</filename>
+    <filename>ping.js</filename>
+    <filename>urls-ajax-edit.js</filename>
+    <filename>backend.css</filename>
+    <filename>backend-j3.css</filename>
+    <filename>backend-j4.css</filename>
+    <filename>microalert.css</filename>
+    <filename>microalert.js</filename>
+    <filename>progress.gif</filename>
+    <filename>go-pro.jpg</filename>
+    <filename>bg-linkcheck.png</filename>
+    <filename>bg-periodic-crawl.png</filename>
+  </media>
+  <scriptfile>installer.php</scriptfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/mysql-updates/</schemapath>
+    </schemas>
+  </update>
+  <administration>
+    <menu>AIMY_SM_MENU</menu>
+    <submenu>
+      <menu
+        link="option=com_aimysitemap&amp;view=dashboard">AIMY_SM_MENU_DASHBOARD</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=urls">AIMY_SM_MENU_MANAGE</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=robotstxt">AIMY_SM_MENU_ROBOTSTXT</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=crawl">AIMY_SM_MENU_CRAWL</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=notify">AIMY_SM_MENU_NOTIFY</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=periodic">AIMY_SM_MENU_PERIODIC</menu>
+      <menu
+        link="option=com_aimysitemap&amp;view=linkcheck">AIMY_SM_MENU_LINKCHECK</menu>
+      <menu
+        link="option=com_config&amp;view=component&amp;component=com_aimysitemap">JOPTIONS</menu>
+    </submenu>
+    <languages folder="admin">
+      <language tag="en-GB">i18n/en-GB.com_aimysitemap.ini</language>
+      <language tag="en-GB">i18n/en-GB.com_aimysitemap.sys.ini</language>
+      <language tag="de-DE">i18n/de-DE.com_aimysitemap.ini</language>
+      <language tag="de-DE">i18n/de-DE.com_aimysitemap.sys.ini</language>
+      <language tag="es-ES">i18n/es-ES.com_aimysitemap.ini</language>
+      <language tag="es-ES">i18n/es-ES.com_aimysitemap.sys.ini</language>
+      <language tag="fa-IR">i18n/fa-IR.com_aimysitemap.ini</language>
+      <language tag="fa-IR">i18n/fa-IR.com_aimysitemap.sys.ini</language>
+      <language tag="fr-FR">i18n/fr-FR.com_aimysitemap.ini</language>
+      <language tag="fr-FR">i18n/fr-FR.com_aimysitemap.sys.ini</language>
+      <language tag="nl-NL">i18n/nl-NL.com_aimysitemap.ini</language>
+      <language tag="nl-NL">i18n/nl-NL.com_aimysitemap.sys.ini</language>
+      <language tag="pl-PL">i18n/pl-PL.com_aimysitemap.ini</language>
+      <language tag="pl-PL">i18n/pl-PL.com_aimysitemap.sys.ini</language>
+      <language tag="pt-BR">i18n/pt-BR.com_aimysitemap.ini</language>
+      <language tag="pt-BR">i18n/pt-BR.com_aimysitemap.sys.ini</language>
+      <language tag="ro-RO">i18n/ro-RO.com_aimysitemap.ini</language>
+      <language tag="ro-RO">i18n/ro-RO.com_aimysitemap.sys.ini</language>
+      <language tag="ru-RU">i18n/ru-RU.com_aimysitemap.ini</language>
+      <language tag="ru-RU">i18n/ru-RU.com_aimysitemap.sys.ini</language>
+      <language tag="sk-SK">i18n/sk-SK.com_aimysitemap.ini</language>
+      <language tag="sk-SK">i18n/sk-SK.com_aimysitemap.sys.ini</language>
+      <language tag="cs-CZ">i18n/cs-CZ.com_aimysitemap.ini</language>
+      <language tag="cs-CZ">i18n/cs-CZ.com_aimysitemap.sys.ini</language>
+      <language tag="sl-SI">i18n/sl-SI.com_aimysitemap.ini</language>
+      <language tag="sl-SI">i18n/sl-SI.com_aimysitemap.sys.ini</language>
+      <language tag="it-IT">i18n/it-IT.com_aimysitemap.ini</language>
+      <language tag="it-IT">i18n/it-IT.com_aimysitemap.sys.ini</language>
+      <language tag="prs-AF">i18n/prs-AF.com_aimysitemap.ini</language>
+      <language tag="prs-AF">i18n/prs-AF.com_aimysitemap.sys.ini</language>
+      <language tag="sv-SE">i18n/sv-SE.com_aimysitemap.ini</language>
+      <language tag="sv-SE">i18n/sv-SE.com_aimysitemap.sys.ini</language>
+    </languages>
+    <files folder="admin">
+      <filename>index.html</filename>
+      <filename>aimysitemap.php</filename>
+      <filename>HttpClient.php</filename>
+      <filename>Notifier.php</filename>
+      <filename>Crawler.php</filename>
+      <filename>RobotsTxt.php</filename>
+      <filename>ExcludePatterns.php</filename>
+      <filename>Uri.php</filename>
+      <filename>Sitemap.php</filename>
+      <filename>IndexNow.php</filename>
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <folder>models</folder>
+      <folder>views</folder>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>fields</folder>
+      <folder>tables</folder>
+      <folder>sql</folder>
+    </files>
+  </administration>
+  <updateservers>
+    <server
+      type="extension"
+      priority="1"
+      name="Aimy Sitemap Update Server">http://updates.aimy-extensions.com/joomla/com_aimysitemap.xml</server>
+  </updateservers>
+</extension>

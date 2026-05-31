@@ -1,0 +1,13 @@
+#route66-analyzer-dropdown {
+    width: 644px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+#route66-analyzer-dropdown .field-media-wrapper .btn {
+    margin: 0 !important;
+    border: 0 !important;
+    color: var(--btn-color);
+}

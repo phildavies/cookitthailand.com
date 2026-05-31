@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ @package   panopticon
+  ~ @copyright Copyright (c)2023-2024 Nicholas K. Dionysopoulos / Akeeba Ltd
+  ~ @license   https://www.gnu.org/licenses/agpl-3.0.txt GNU Affero General Public License, version 3 or later
+  -->
+
+<extension type="component" method="upgrade">
+    <name>com_panopticon</name>
+    <author>Akeeba Ltd</author>
+    <creationDate>2024-12-03</creationDate>
+    <copyright>(C) 2023-2024 Nicholas K. Dionysopoulos / Akeeba Ltd</copyright>
+    <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+    <authorEmail>no-reply@akeeba.com</authorEmail>
+    <authorUrl>www.akeeba.com</authorUrl>
+    <version>1.0.7</version>
+    <description>COM_PANOPTICON_XML_DESCRIPTION</description>
+    <namespace path="src">Akeeba\Component\Panopticon</namespace>
+
+    <administration>
+        <menu>COM_PANOPTICON</menu>
+
+        <files folder="backend">
+            <filename>config.xml</filename>
+            <filename>version.php</filename>
+
+            <folder>language</folder>
+            <folder>services</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>vendor</folder>
+        </files>
+
+        <languages folder="backend">
+            <language tag="de-DE">language/de-DE/com_panopticon.ini</language>
+            <language tag="de-DE">language/de-DE/com_panopticon.sys.ini</language>
+            <language tag="en-GB">language/en-GB/com_panopticon.ini</language>
+            <language tag="en-GB">language/en-GB/com_panopticon.sys.ini</language>
+        </languages>
+    </administration>
+
+    <api>
+        <files folder="api">
+            <folder>src</folder>
+        </files>
+    </api>
+</extension>

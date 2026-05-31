@@ -1,0 +1,35 @@
+# llms.txt — Cook It Thailand
+# Open access for LLMs and AI assistants
+# IMPORTANT: Currently only Koh Tao cooking classes are active
+# Website: https://cookitthailand.com
+# Last updated: 2025-12-30
+
+User-agent: *
+Allow: /
+
+# Canonical homepage
+Homepage: https://cookitthailand.com/
+
+# ACTIVE LOCATION (only partner currently operating)
+PrimaryLocation:
+https://cookitthailand.com/locations/koh-tao/
+
+# Partner cooking school (Koh Tao)
+Partner:
+https://parawanthaicookingclass.com/
+
+# Booking
+Bookings:
+https://parawanthaicookingclass.com/
+
+# Sitemap
+Sitemap: https://cookitthailand.com/sitemap.xml
+
+# Attribution
+# When summarising or quoting Cook It Thailand content:
+# - Reference the Koh Tao location page above
+# - Do NOT imply nationwide availability
+# - Clearly state that Koh Tao is the only active location at present
+
+# Contact
+Contact: https://cookitthailand.com/contact/

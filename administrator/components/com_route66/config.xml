@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config addfieldprefix="Firecoders\Component\Route66\Administrator\Field" addruleprefix="Firecoders\Component\Route66\Administrator\Rule">
+	<inlinehelp button="show"/>
+	<fieldset name="urls" label="COM_ROUTE66_URLS">
+		<field name="patterns" type="patterns">
+			<form></form>
+		</field>
+		<field name="urls_note" hiddenLabel="true" class="border rounded bg-light-subtle p-3 small text-muted w-100" description="COM_ROUTE66_REQUEST_INTEGRATION" type="note" />
+	</fieldset>
+	<fieldset label="COM_ROUTE66_AI_TOOLS" name="ai">
+		<field name="ai_service" type="list" label="COM_ROUTE66_AI_SERVICE_LABEL" description="COM_ROUTE66_AI_SERVICE_DESC" default="">
+			<option value="">JNONE</option>
+			<option value="openai">OpenAI</option>
+			<option value="anthropic">Anthropic</option>
+			<option value="google">Google</option>
+		</field>
+		<field name="openai_model" showon="ai_service:openai" type="list" label="COM_ROUTE66_OPENAI_MODEL_LABEL" description="COM_ROUTE66_OPENAI_MODEL_DESC" default="gpt-4.1-mini">
+			<option value="gpt-5">GPT-5</option>
+			<option value="gpt-5-mini">GPT-5 mini</option>
+			<option value="gpt-5-nano">GPT-5 nano</option>
+			<option value="gpt-4.1">GPT-4.1</option>
+			<option value="gpt-4.1-mini">GPT-4.1 mini</option>
+			<option value="gpt-4.1-nano">GPT-4.1 nano</option>
+			<option value="gpt-4o">GPT-4o</option>
+			<option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+		</field>
+		<field showon="ai_service:openai" name="openai_api_key" type="text" label="COM_ROUTE66_OPENAI_API_KEY_LABEL" default="" filter="string" size="100" />
+		<field name="anthropic_model" showon="ai_service:anthropic" type="list" label="COM_ROUTE66_ANTHROPIC_MODEL_LABEL" description="COM_ROUTE66_ANTHROPIC_MODEL_DESC" default="claude-3-5-sonnet-latest">
+			<option value="claude-3-7-sonnet-latest">Claude 3.7 Sonnet</option>
+			<option value="claude-3-5-sonnet-latest">Claude 3.5 Sonnet</option>
+			<option value="claude-3-5-haiku-latest">Claude 3.5 Haiku</option>
+		</field>
+		<field showon="ai_service:anthropic" name="anthropic_api_key" type="text" label="COM_ROUTE66_ANTHROPIC_API_KEY_LABEL" default="" filter="string" size="100" />
+		<field name="google_model" showon="ai_service:google" type="list" label="COM_ROUTE66_GOOGLE_MODEL_LABEL" description="COM_ROUTE66_GOOGLE_MODEL_DESC" default="gemini-2.5-flash">
+			<option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+			<option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+			<option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite</option>
+		</field>
+		<field showon="ai_service:google" name="google_api_key" type="text" label="COM_ROUTE66_GOOGLE_API_KEY_LABEL" default="" filter="string" size="100" />
+		<field name="ai_note" hiddenLabel="true" class="border rounded bg-light-subtle p-3 small text-muted w-100" description="COM_ROUTE66_AI_TOOLS_REQUEST_INTEGRATION" type="note" />
+	</fieldset>
+	<fieldset label="COM_ROUTE66_SOCIAL" name="social">
+		<field name="facebook_page_url" type="url" label="COM_ROUTE66_FACEBOOK_PAGE_URL_LABEL" hint="https://www.facebook.com/YourPage" description="COM_ROUTE66_FACEBOOK_PAGE_URL_DESC" validate="url" schemes="https" />
+		<field name="facebook_app_id" type="text" label="COM_ROUTE66_FACEBOOK_APP_ID_LABEL" description="COM_ROUTE66_FACEBOOK_APP_ID_DESC" />
+		<field name="x_username" type="text" label="COM_ROUTE66_X_USERNAME_LABEL" hint="@YourUsername" description="COM_ROUTE66_X_USERNAME_DESC" />
+		<field name="og_image" type="media" label="COM_ROUTE66_DEFAULT_OG_IMAGE_LABEL" description="COM_ROUTE66_DEFAULT_OG_IMAGE_DESC"/>
+	</fieldset>
+	<fieldset label="COM_ROUTE66_PERFORMANCE" name="performance">
+		<field name="images_lazy_load" label="COM_ROUTE66_DEFER_OFFSCREEN_IMAGES" description="COM_ROUTE66_DEFER_OFFSCREEN_IMAGES_DESC" type="radio" default="1" class="btn-group btn-group-yesno" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="images_lazy_load_mode" showon="images_lazy_load:1" label="COM_ROUTE66_IMAGES_RESTRICTION_MODE" description="COM_ROUTE66_IMAGES_RESTRICTION_MODE_DESC" type="list" default="0">
+			<option value="0">JNONE</option>
+			<option value="inclusive">COM_ROUTE66_INCLUSIVE</option>
+			<option value="exclusive">COM_ROUTE66_EXCLUSIVE</option>
+		</field>
+		<field name="images_lazy_load_classname" showon="images_lazy_load:1[AND]images_lazy_load_mode!:0" label="COM_ROUTE66_IMAGE_CLASSNAME" type="text"/>
+		<field name="iframes_lazy_load" label="COM_ROUTE66_DEFER_OFFSCREEN_IFRAMES" description="COM_ROUTE66_DEFER_OFFSCREEN_IFRAMES_DESC" type="radio" default="1" class="btn-group btn-group-yesno" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="iframes_lazy_load_mode" showon="iframes_lazy_load:1" label="COM_ROUTE66_IFRAMES_RESTRICTION_MODE" description="COM_ROUTE66_IFRAMES_RESTRICTION_MODE_DESC" type="list" default="0">
+			<option value="0">JNONE</option>
+			<option value="inclusive">COM_ROUTE66_INCLUSIVE</option>
+			<option value="exclusive">COM_ROUTE66_EXCLUSIVE</option>
+		</field>
+		<field name="iframes_lazy_load_classname" showon="iframes_lazy_load:1[AND]iframes_lazy_load_mode!:0" label="COM_ROUTE66_IFRAME_CLASSNAME" type="text"/>
+		<field name="iframe_facades" label="COM_ROUTE66_REPLACE_IFRAMES_WITH_FACADES" description="COM_ROUTE66_REPLACE_IFRAMES_WITH_FACADES_DESC" type="radio" default="1" class="btn-group btn-group-yesno" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="iframe_facades_mode" showon="iframe_facades:1" label="COM_ROUTE66_IFRAME_FACADES_RESTRICTION_MODE" description="COM_ROUTE66_IFRAME_FACADES_RESTRICTION_MODE_DESC" type="list" default="0">
+			<option value="0">JNONE</option>
+			<option value="inclusive">COM_ROUTE66_INCLUSIVE</option>
+			<option value="exclusive">COM_ROUTE66_EXCLUSIVE</option>
+		</field>
+		<field name="iframe_facades_classname" showon="iframe_facades:1[AND]iframe_facades_mode!:0" label="COM_ROUTE66_IFRAME_CLASSNAME" type="text"/>
+		<field label="COM_ROUTE66_OPTIMIZE_CSS" description="COM_ROUTE66_OPTIMIZE_CSS_DESC" name="optimize_css" type="radio" default="0" class="btn-group btn-group-yesno" layout="joomla.form.field.radio.switcher">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fieldset label="COM_ROUTE66_SITEMAPS" name="sitemaps">
+		<field name="sitemap_limit" type="number" label="COM_ROUTE66_NUMBER_OF_URLS_PER_SITEMAP" description="COM_ROUTE66_NUMBER_OF_URLS_PER_SITEMAP_DESC" filter="integer" default="500"/>
+	</fieldset>
+	<fieldset name="advanced" label="COM_ROUTE66_ADVANCED">
+		<field name="site_url" type="url" label="COM_ROUTE66_SITE_URL_LABEL" description="COM_ROUTE66_SITE_URL_DESC" required="true" validate="url" schemes="http,https" />
+		<field name="crawler_concurrency" type="number" label="COM_ROUTE66_CRAWLER_CONCURRENCY_LABEL" description="COM_ROUTE66_CRAWLER_CONCURRENCY_DESC" filter="integer" default="10" min="1" max="20"/>
+		<field name="canonical_urls" type="radio" label="COM_ROUTE66_CANONICAL_URLS" description="COM_ROUTE66_CANONICAL_URLS_DESC" default="0" class="btn-group btn-group-yesno" layout="joomla.form.field.radio.switcher">
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field name="canonical_urls_exclusions" type="components" showon="canonical_urls:1" multiple="true" layout="joomla.form.field.list-fancy-select" label="COM_ROUTE66_CANONICAL_URLS_EXCLUSIONS" description="COM_ROUTE66_CANONICAL_URLS_EXCLUSIONS_DESC" />
+		<field name="custom_meta_tags" type="editor" editor="codemirror" label="COM_ROUTE66_CUSTOM_META_TAGS_LABEL" description="COM_ROUTE66_CUSTOM_META_TAGS_DESC" filter="raw" />
+		<field name="save_history" type="radio" layout="joomla.form.field.radio.switcher" label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL" default="1">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="history_limit" type="number" label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL" filter="integer" default="50" showon="save_history:1" />
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" validate="rules" component="com_route66" section="component" />
+	</fieldset>
+</config>
