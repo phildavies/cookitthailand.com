@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/parawa6/cookitthailand.com/
+    - /bin/rsync -a --delete ./ $DEPLOYPATH --exclude='.git/' --exclude='.cpanel.yml' --exclude='configuration.php' --exclude='configuration.bak.php' --exclude='.env' --exclude='.env.*' --exclude='cache/' --exclude='administrator/cache/' --exclude='tmp/' --exclude='logs/' --exclude='log/' --exclude='.well-known/' --exclude='Akeeba Backups/' --exclude='.jch/' --exclude='shortpixel-web/'
